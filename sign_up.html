@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Styling -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Company TAB NAME</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .signup-btn,
+        .login-btn {
+            background-color: #2ecc71;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-btn:hover,
+        .login-btn:hover {
+            background-color: #27ae60;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            padding: 20px;
+            padding-top: 50px;
+            align-items: center;
+        }
+
+        .image-container {
+            flex: 0.5;
+            display: flex;
+        }
+
+        .image {
+            width: 100%;
+        }
+
+        .description-container {
+            flex: 1;
+            padding: 0 40px;
+            max-width: 400px;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .signup-form {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            margin-bottom: 5px;
+        }
+
+        .signup-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .signup-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 125px;
+        }
+
+        .input-guide {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .input-error {
+            font-size: 12px;
+            color: red;
+            padding-bottom: 5px;
+        }
+
+        .signup-submit {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-submit:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="Logo.png" alt="Logo" class="logo">
+        <div class="title">Hiring Company Name</div>
+        <div class="buttons">
+            <a href="#" class="signup-btn">Sign up</a>
+            <a href="#" class="login-btn">Log in</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Left side with large image -->
+        <div class="image-container">
+            <img src="Logo.png" alt="Large Image" class="image">
+        </div>
+        <!-- Right side with description and signup form -->
+        <div class="description-container">
+            <p class="description">
+                Welcome to Your Website! Explore the amazing functionalities that our platform offers.
+                Join us today to experience a whole new world of possibilities.
+            </p>
+        </div>
+        <!-- Signup Form -->
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="username" class="signup-input" placeholder="Username">
+                <div class="input-guide">Please enter a unique username</div>
+                <div class="input-error">Username already exists</div>
+                <label for="firstname">Full name:</label>
+                <div class="signup-row">
+                    <input type="firstname" class="signup-input" placeholder="First name">
+                    <input type="lastname" class="signup-input" placeholder="Last name">
+                </div>
+                <div class="input-guide">Only alphabets allowed</div>
+                <div class="input-error">Error message</div>
+                <label for="email">Email address:</label>
+                <input type="email" class="signup-input" placeholder="Email address">
+                <div class="input-guide">Please enter a valid email address</div>
+                <div class="input-error">Invalid email format / Email already registered</div>
+                <label for="phonenumber">Phone number:</label>
+                <input type="phonenumber" class="signup-input" placeholder="Phone number">
+                <div class="input-guide">Only U.S. numbers allowed. Ex: 1235556789</div>
+                <div class="input-error">Must have exactly 10 digits</div>
+                <div class="button-row">
+                    <button type="submit" class="signup-submit">Sign Up<br>Professional</button>
+                    <button type="submit" class="signup-submit">Sign Up<br>Employer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
