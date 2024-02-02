@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Styling -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMU Hiring</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buttonsnav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            /* background-color: #2ecc71; */
+            color: rgb(157, 12, 12);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: rgba(118, 0, 0, 0.699, 12, 12);
+        }
+
+        /* Menu Content Styles */
+        menu {
+            background-color: #3498db;
+            padding: 15px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 45px;
+            left: 0;
+            overflow-y: auto;
+        }
+
+        menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin: 50px 0px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        menu a:first-child {
+            margin-top: 50px;
+            /* Added margin-top for the first menu item */
+        }
+
+        section {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            margin-left: 260px;
+            padding: 20px;
+            padding-top: 50px;
+            align-items: center;
+        }
+
+        .info-space {
+            padding: 60px;
+            margin-top: 40px;
+            margin-left: 100px;
+            border-color: #333;
+            border-radius: 10px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            margin-bottom: 5px;
+            font-size: 25px;
+        }
+
+        .info-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 15px;
+        }
+
+        .input-guide {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .input-error {
+            font-size: 12px;
+            color: red;
+            padding-bottom: 5px;
+        }
+
+        .section-bts {
+            padding: 20px;
+            margin-left: 200px;
+            position: fixed;
+            top: 60px;
+            right: 0;
+        }
+
+        .account-bt {
+            background-color: #6e8798;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .account-bt:hover {
+            background-color: #778e9d;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="../Logo.png" alt="Logo" class="logo">
+        <div class="title">Account settings</div>
+        <div class="buttons">
+            <a href="#" class="username-btn">lorem_ipsum</a>
+            <t>&emsp;&emsp;&emsp;</t>
+            <a href="#" class="login-btn">Log out</a>
+        </div>
+    </nav>
+
+    <!-- Menu -->
+    <menu>
+        <a href="#">Account settings</a>
+        <a href="#">Post new job description</a>
+        <a href="#">Browse job descriptions</a>
+        <a href="#">Make payment</a>
+    </menu>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="info-space">
+            <label for="name">First name:</label>
+            <label for="email">Last name:</label>
+            <div class="input-row">
+                <input type="firstname" class="info-input" placeholder="First name">
+                <input type="lastname" class="info-input" placeholder="Last name">
+            </div>
+            <label for="email">Email address:</label>
+            <input type="email" class="info-input" placeholder="Email address">
+            <div class="input-guide">Please enter a valid email address</div>
+            <div class="input-error">Invalid email format / Email already registered</div>
+        </div>
+
+        <div class="info-space">
+            <div class="info-label">Company name</div>
+            <div class="info-input">lorem_ipsum</div>
+            <div class="info-label">Phone number</div>
+            <div class="info-input">lorem_ipsum</div>
+            <div class="info-label">Address</div>
+            <div class="info-input">5325 Lorem St</div>
+            <div class="info-input">Dallas, TX</div>
+            <div class="info-input">12345</div>
+        </div>
+
+        <div class="section-bts">
+            <div class="account-bt">Edit profile</div>
+            <div class="account-bt" style="color: rgb(157, 12, 12); margin-top: 450px;">Delete account</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

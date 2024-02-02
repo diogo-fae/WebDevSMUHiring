@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Styling -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMU Hiring</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buttonsnav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            /* background-color: #2ecc71; */
+            color: rgb(157, 12, 12);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: rgba(118, 0, 0, 0.699, 12, 12);
+        }
+
+        /* Menu Content Styles */
+        menu {
+            background-color: #3498db;
+            padding: 15px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 45px;
+            left: 0;
+            overflow-y: auto;
+        }
+
+        menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin: 50px 0px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        menu a:first-child {
+            margin-top: 50px;
+            /* Added margin-top for the first menu item */
+        }
+
+        section {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            margin-left: 260px;
+            padding: 20px;
+            padding-top: 50px;
+            align-items: center;
+        }
+
+        .info-space {
+            padding: 60px;
+            margin-top: 40px;
+            margin-left: 100px;
+            border-color: #333;
+            border-radius: 10px;
+        }
+
+        .info-title {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            margin-bottom: 5px;
+            font-size: 25px;
+        }
+
+        .info-content {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .section-bts {
+            padding: 20px;
+            margin-left: 200px;
+            position: fixed;
+            top: 60px;
+            right: 0;
+        }
+
+        .account-bt {
+            background-color: #6e8798;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .account-bt:hover {
+            background-color: #778e9d;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="../Logo.png" alt="Logo" class="logo">
+        <div class="title">Account settings</div>
+        <div class="buttons">
+            <a href="#" class="username-btn">lorem_ipsum</a>
+            <t>&emsp;&emsp;&emsp;</t>
+            <a href="#" class="login-btn">Log out</a>
+        </div>
+    </nav>
+
+    <!-- Menu -->
+    <menu>
+        <a href="#">Account settings</a>
+        <a href="#">Post new job description</a>
+        <a href="#">Browse job descriptions</a>
+        <a href="#">Make payment</a>
+    </menu>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="info-space">
+            <div class="info-title">Name</div>
+            <div class="info-content">Lorem Ipsum</div>
+            <div class="info-title">Username</div>
+            <div class="info-content">lorem_ipsum</div>
+            <div class="info-title">Email</div>
+            <div class="info-content">iorem@ipsum.com</div>
+        </div>
+
+        <div class="info-space">
+            <div class="info-title">Company name</div>
+            <div class="info-content">lorem_ipsum</div>
+            <div class="info-title">Phone number</div>
+            <div class="info-content">lorem_ipsum</div>
+            <div class="info-title">Address</div>
+            <div class="info-content">5325 Lorem St</div>
+            <div class="info-content">Dallas, TX</div>
+            <div class="info-content">12345</div>
+        </div>
+
+        <div class="section-bts">
+            <div class="account-bt">Edit profile</div>
+            <div class="account-bt" style="color: rgb(157, 12, 12); margin-top: 450px;">Delete account</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

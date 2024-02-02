@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiring Company TAB NAME</title>
+    <title>SMU Hiring</title>
     <style>
         body {
             margin: 0;
@@ -85,7 +85,7 @@
             color: #333;
         }
 
-        .login-form {
+        .signup-form {
             background-color: #ecf0f1;
             padding: 20px;
             border-radius: 10px;
@@ -97,7 +97,7 @@
             margin-bottom: 5px;
         }
 
-        .login-input {
+        .signup-input {
             width: 100%;
             padding: 10px;
             margin-bottom: 5px;
@@ -107,7 +107,7 @@
             box-sizing: border-box;
         }
 
-        .login-row {
+        .signup-row {
             display: flex;
             gap: 15px;
         }
@@ -128,7 +128,7 @@
             padding-bottom: 5px;
         }
 
-        .login-submit {
+        .signup-submit {
             background-color: #3498db;
             color: #fff;
             padding: 10px 15px;
@@ -140,7 +140,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .login-submit:hover {
+        .signup-submit:hover {
             background-color: #2980b9;
         }
     </style>
@@ -150,10 +150,10 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <img src="Logo.png" alt="Logo" class="logo">
-        <div class="title">Hiring Company Name</div>
+        <img src="../Logo.png" alt="Logo" class="logo">
+        <div class="title">SMU Hiring</div>
         <div class="buttons">
-            <a href="#" class="login-btn">Sign up</a>
+            <a href="#" class="signup-btn">Sign up</a>
             <a href="#" class="login-btn">Log in</a>
         </div>
     </nav>
@@ -162,28 +162,38 @@
     <div class="main-content">
         <!-- Left side with large image -->
         <div class="image-container">
-            <img src="Logo.png" alt="Large Image" class="image">
+            <img src="../Logo.png" alt="Large Image" class="image">
         </div>
-        <!-- Right side with description and login form -->
+        <!-- Right side with description and signup form -->
         <div class="description-container">
             <p class="description">
                 Welcome to Your Website! Explore the amazing functionalities that our platform offers.
                 Join us today to experience a whole new world of possibilities.
             </p>
         </div>
-        <!-- Login Form -->
-        <div class="login-form">
-            <h2>Login</h2>
+        <!-- Signup Form -->
+        <div class="signup-form">
+            <h2>Sign Up</h2>
             <form>
-                <label for="username">Username:</label>
-                <input type="username" class="login-input" placeholder="Username">
+                <label for="cat1">Category 1:</label>
+                <input type="cat1" class="signup-input" placeholder="Category 1">
                 <div class="input-guide">Info message</div>
                 <div class="input-error">Error message</div>
-                <label for="password">Password:</label>
-                <input type="password" class="login-input" placeholder="Password">
+                <label for="cat1skills">Skills - Category 1:</label>
+                <input type="cat1skills" class="signup-input" placeholder="Skills">
+                <div class="input-guide">Separate each skill by a comma. Ex: Java,Amazon Web Services,Python</div>
+                <div class="input-error">Error message</div>
+
+                <label for="cat2">Category 2:</label>
+                <input type="cat2" class="signup-input" placeholder="Category 2">
                 <div class="input-guide">Info message</div>
                 <div class="input-error">Error message</div>
-                <button type="submit" class="login-submit">Login</button>
+                <label for="cat2skills">Skills - Category 2:</label>
+                <input type="cat2skills" class="signup-input" placeholder="Skills">
+                <div class="input-guide">Separate each skill by a comma. Ex: Java,Amazon Web Services,Python</div>
+                <div class="input-error">Error message</div>
+
+                <button type="submit" class="signup-submit">Sign up</button>
             </form>
         </div>
     </div>

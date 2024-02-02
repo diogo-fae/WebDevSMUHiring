@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiring Company TAB NAME</title>
+    <title>SMU Hiring</title>
     <style>
         body {
             margin: 0;
@@ -85,7 +85,7 @@
             color: #333;
         }
 
-        .signup-form {
+        .login-form {
             background-color: #ecf0f1;
             padding: 20px;
             border-radius: 10px;
@@ -97,7 +97,7 @@
             margin-bottom: 5px;
         }
 
-        .signup-input {
+        .login-input {
             width: 100%;
             padding: 10px;
             margin-bottom: 5px;
@@ -107,7 +107,7 @@
             box-sizing: border-box;
         }
 
-        .signup-row {
+        .login-row {
             display: flex;
             gap: 15px;
         }
@@ -128,7 +128,7 @@
             padding-bottom: 5px;
         }
 
-        .signup-submit {
+        .login-submit {
             background-color: #3498db;
             color: #fff;
             padding: 10px 15px;
@@ -140,7 +140,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .signup-submit:hover {
+        .login-submit:hover {
             background-color: #2980b9;
         }
     </style>
@@ -150,10 +150,10 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <img src="Logo.png" alt="Logo" class="logo">
-        <div class="title">Hiring Company Name</div>
+        <img src="../Logo.png" alt="Logo" class="logo">
+        <div class="title">SMU Hiring</div>
         <div class="buttons">
-            <a href="#" class="signup-btn">Sign up</a>
+            <a href="#" class="login-btn">Sign up</a>
             <a href="#" class="login-btn">Log in</a>
         </div>
     </nav>
@@ -162,42 +162,28 @@
     <div class="main-content">
         <!-- Left side with large image -->
         <div class="image-container">
-            <img src="Logo.png" alt="Large Image" class="image">
+            <img src="../Logo.png" alt="Large Image" class="image">
         </div>
-        <!-- Right side with description and signup form -->
+        <!-- Right side with description and login form -->
         <div class="description-container">
             <p class="description">
                 Welcome to Your Website! Explore the amazing functionalities that our platform offers.
                 Join us today to experience a whole new world of possibilities.
             </p>
         </div>
-        <!-- Signup Form -->
-        <div class="signup-form">
-            <h2>Sign Up</h2>
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login</h2>
             <form>
                 <label for="username">Username:</label>
-                <input type="username" class="signup-input" placeholder="Username">
-                <div class="input-guide">Please enter a unique username</div>
-                <div class="input-error">Username already exists</div>
-                <label for="firstname">Full name:</label>
-                <div class="signup-row">
-                    <input type="firstname" class="signup-input" placeholder="First name">
-                    <input type="lastname" class="signup-input" placeholder="Last name">
-                </div>
-                <div class="input-guide">Only alphabets allowed</div>
+                <input type="username" class="login-input" placeholder="Username">
+                <div class="input-guide">Info message</div>
                 <div class="input-error">Error message</div>
-                <label for="email">Email address:</label>
-                <input type="email" class="signup-input" placeholder="Email address">
-                <div class="input-guide">Please enter a valid email address</div>
-                <div class="input-error">Invalid email format / Email already registered</div>
-                <label for="phonenumber">Phone number:</label>
-                <input type="phonenumber" class="signup-input" placeholder="Phone number">
-                <div class="input-guide">Only U.S. numbers allowed. Ex: 1235556789</div>
-                <div class="input-error">Must have exactly 10 digits</div>
-                <div class="button-row">
-                    <button type="submit" class="signup-submit">Sign Up<br>Professional</button>
-                    <button type="submit" class="signup-submit">Sign Up<br>Employer</button>
-                </div>
+                <label for="password">Password:</label>
+                <input type="password" class="login-input" placeholder="Password">
+                <div class="input-guide">Info message</div>
+                <div class="input-error">Error message</div>
+                <button type="submit" class="login-submit">Login</button>
             </form>
         </div>
     </div>
