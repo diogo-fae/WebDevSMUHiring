@@ -98,10 +98,12 @@
 
         .info-space {
             padding: 60px;
-            margin-top: 40px;
-            margin-left: 100px;
+            margin-top: 20px;
+            margin-left: 10px;
+            padding-bottom: 0px;
             border-color: #333;
             border-radius: 10px;
+            /* border-style: dashed; */
         }
 
         .info-label {
@@ -119,6 +121,11 @@
             border: 1px solid #bdc3c7;
             border-radius: 5px;
             box-sizing: border-box;
+        }
+
+        .label-row {
+            gap: 43px;
+            display: flex;
         }
 
         .input-row {
@@ -143,6 +150,7 @@
             position: fixed;
             top: 60px;
             right: 0;
+            /* border: dashed; */
         }
 
         .account-bt {
@@ -154,6 +162,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            text-align: center;
             transition: background-color 0.3s ease;
         }
 
@@ -188,32 +197,97 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="info-space">
-            <label for="name">First name:</label>
-            <label for="email">Last name:</label>
+            <div class="label-row">
+                <div class="info-label">First name:</div>
+                <div class="info-label">Last name:</div>
+            </div>
             <div class="input-row">
                 <input type="firstname" class="info-input" placeholder="First name">
                 <input type="lastname" class="info-input" placeholder="Last name">
             </div>
-            <label for="email">Email address:</label>
+            <div class="input-guide">Please enter a valid email address</div>
+            <div class="input-error">Invalid email format / Email already registered</div>
+            <div class="info-label">Email address:</div>
             <input type="email" class="info-input" placeholder="Email address">
+            <div class="input-guide">Please enter a valid email address</div>
+            <div class="input-error">Invalid email format / Email already registered</div>
+            <div class="info-label">Company name</div>
+            <input type="companyname" class="info-input" placeholder="Company name">
             <div class="input-guide">Please enter a valid email address</div>
             <div class="input-error">Invalid email format / Email already registered</div>
         </div>
 
         <div class="info-space">
-            <div class="info-label">Company name</div>
-            <div class="info-input">lorem_ipsum</div>
             <div class="info-label">Phone number</div>
-            <div class="info-input">lorem_ipsum</div>
-            <div class="info-label">Address</div>
-            <div class="info-input">5325 Lorem St</div>
-            <div class="info-input">Dallas, TX</div>
-            <div class="info-input">12345</div>
+            <input type="phonenumber" class="info-input" placeholder="Phone number">
+            <div class="input-guide">Please enter a valid email address</div>
+            <div class="input-error">Invalid email format / Email already registered</div>
+            <div class="info-label">Mailing address:</div>
+            <input type="address" class="info-input" placeholder="Mailing address">
+            <div class="input-guide">Please enter a valid adddress</div>
+            <div class="input-error">Error message</div>
+            <div class="input-row">
+                <input type="city" class="info-input" placeholder="City">
+                <select class="info-input">
+                    <option value="" selected>State</option>
+                    <option value="AZ">AZ</option>
+                    <option value="AR">AR</option>
+                    <option value="CA">CA</option>
+                    <option value="CO">CO</option>
+                    <option value="CT">CT</option>
+                    <option value="DE">DE</option>
+                    <option value="FL">FL</option>
+                    <option value="GA">GA</option>
+                    <option value="HI">HI</option>
+                    <option value="ID">ID</option>
+                    <option value="IL">IL</option>
+                    <option value="IN">IN</option>
+                    <option value="IA">IA</option>
+                    <option value="KS">KS</option>
+                    <option value="KY">KY</option>
+                    <option value="LA">LA</option>
+                    <option value="ME">ME</option>
+                    <option value="MD">MD</option>
+                    <option value="MA">MA</option>
+                    <option value="MI">MI</option>
+                    <option value="MN">MN</option>
+                    <option value="MS">MS</option>
+                    <option value="MO">MO</option>
+                    <option value="MT">MT</option>
+                    <option value="NE">NE</option>
+                    <option value="NV">NV</option>
+                    <option value="NH">NH</option>
+                    <option value="NJ">NJ</option>
+                    <option value="NM">NM</option>
+                    <option value="NY">NY</option>
+                    <option value="NC">NC</option>
+                    <option value="ND">ND</option>
+                    <option value="OH">OH</option>
+                    <option value="OK">OK</option>
+                    <option value="OR">OR</option>
+                    <option value="PA">PA</option>
+                    <option value="RI">RI</option>
+                    <option value="SC">SC</option>
+                    <option value="SD">SD</option>
+                    <option value="TN">TN</option>
+                    <option value="TX">TX</option>
+                    <option value="UT">UT</option>
+                    <option value="VT">VT</option>
+                    <option value="VA">VA</option>
+                    <option value="WA">WA</option>
+                    <option value="WV">WV</option>
+                    <option value="WI">WI</option>
+                    <option value="WY">WY</option>
+                </select>
+                <input type="zipcode" class="info-input" placeholder="Zip code">
+            </div>
+            <div class="input-guide">Enter a valid zip code</div>
+            <div class="input-error">Error message</div>
         </div>
 
         <div class="section-bts">
-            <div class="account-bt">Edit profile</div>
-            <div class="account-bt" style="color: rgb(157, 12, 12); margin-top: 450px;">Delete account</div>
+            <div class="account-bt" style="color: rgb(4, 125, 0);">Save</div>
+            <div class="account-bt" style="color: rgb(157, 12, 12); margin-top: 450px;">Cancel</div>
         </div>
     </div>
 
