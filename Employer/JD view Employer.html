@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Styling -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMU Hiring</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #3498db;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .buttonsnav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .logout-btn {
+            /* background-color: #2ecc71; */
+            color: rgb(157, 12, 12);
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-btn:hover {
+            background-color: rgba(118, 0, 0, 0.699, 12, 12);
+        }
+
+        /* Menu Content Styles */
+        menu {
+            background-color: #3498db;
+            padding: 15px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            margin: 0px;
+            left: 0;
+            overflow-y: auto;
+        }
+
+        menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+            margin: 50px 0px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        menu a:first-child {
+            margin-top: 50px;
+            /* Added margin-top for the first menu item */
+        }
+
+        section {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            display: flex;
+            margin-left: 260px;
+            /* padding: 20px;
+            padding-top: 50px; */
+            align-items: center;
+        }
+
+        .info-space {
+            padding: 30px;
+            padding-top: 00px;
+            margin-top: 50px;
+            padding-bottom: 0px;
+            border-color: #333;
+            border-radius: 10px;
+            flex: 1;
+            align-self: flex-start;
+            /* border-style: dashed; */
+        }
+
+        .info-space:first-child {
+            padding-left: 60px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            margin-bottom: 5px;
+            font-size: 25px;
+        }
+
+        .info-content {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .label-row {
+            /* border-style: dashed; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-break: none;
+        }
+
+        .input-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .input-guide {
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        .input-error {
+            font-size: 12px;
+            color: red;
+            padding-bottom: 5px;
+        }
+
+        .section-bts {
+            padding: 20px;
+            margin-top: 0px;
+            align-self: flex-start;
+        }
+
+        .account-bt {
+            background-color: #6e8798;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .account-bt:hover {
+            background-color: #778e9d;
+        }
+
+        .scrollable-box {
+            width: 300px;
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            position: relative;
+            margin-left: 40px;
+            margin-top: 50px;
+            align-self: flex-start;
+            border-radius: 8px;
+        }
+
+        .box-header {
+            background-color: #f0f0f0;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        .box-content {
+            padding: 10px;
+        }
+
+        .box-item {
+            font-size: 18px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .box-item h2 {
+            margin-bottom: 5px;
+        }
+
+        .box-item:hover {
+            background-color: #6262626a;
+        }
+
+        .box-item.clicked {
+            background-color: #3498db;
+            /* Change to the desired color when clicked */
+        }
+
+        table {
+            margin-top: 10px;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+            line-break: strict;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <img src="../Logo.png" alt="Logo" class="logo">
+        <div class="title">View job descriptions</div>
+        <div class="buttons">
+            <a href="#" class="username-btn">lorem_ipsum</a>
+            <t>&emsp;&emsp;&emsp;</t>
+            <a href="#" class="login-btn">Log out</a>
+        </div>
+    </nav>
+
+    <!-- Menu -->
+    <menu>
+        <a href="#">Account settings</a>
+        <a href="#">Post new job description</a>
+        <a href="#">Browse job descriptions</a>
+        <a href="#">Make payment</a>
+    </menu>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="scrollable-box">
+            <div class="box-header">
+                <div class="info-label">Posted jobs</div>
+            </div>
+            <div class="box-content">
+                <div class="box-item">0 - Lorem ipsum</div>
+                <div class="box-item">1 - Lorem ipsum</div>
+                <div class="box-item">2 - Lorem ipsum</div>
+                <div class="box-item">3 - Lorem ipsum</div>
+                <div class="box-item">4 - Lorem ipsum</div>
+                <div class="box-item">5 - Lorem ipsum</div>
+                <div class="box-item">6 - Lorem ipsum</div>
+                <div class="box-item">7 - Lorem ipsum</div>
+                <div class="box-item">8 - Lorem ipsum</div>
+            </div>
+        </div>
+        <div class="info-space">
+            <div class="info-label">Job ID:</div>
+            <div class="info-content">12345</div>
+            <div class="info-label">Name of position:</div>
+            <div class="info-content">Lorem Ipsum</div>
+            <div class="info-label">Supervisor name:</div>
+            <div class="info-content">Lorem Ipsum</div>
+            <div class="info-label">Supervisor email:</div>
+            <div class="info-content">Lorem Ipsum</div>
+            <div class="info-label">Supervisor phone number:</div>
+            <div class="info-content">490-555-9310</div>
+        </div>
+
+        <div class="info-space">
+            <div class="info-label">Pay per hour:</div>
+            <div class="info-content">$13.50</div>
+            <div class="label-row">
+                <div class="info-label">Start date:</div>
+                <div class="info-label">End date:</div>
+            </div>
+            <div class="input-row">
+                <div class="info-content">08/2024</div>
+                <div class="info-content">05/2025</div>
+            </div>
+            <div class="label-row">
+                <div class="info-label">Start time:</div>
+                <div class="info-label">End time:</div>
+            </div>
+            <div class="input-row">
+                <div class="info-content">09:00</div>
+                <div class="info-content">18:30</div>
+            </div>
+            <div class="info-label">Required qualifications:</div>
+            <table id="categorytable">
+                <thread>
+                    <tr>
+                        <th>Category</th>
+                        <th>Skills</th>
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <td>Languages</td>
+                        <td>Python, C++, C#, Java, Ruby, PHP</td>
+                    </tr>
+                    <tr>
+                        <td>Job titles</td>
+                        <td>Software engineer</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>Python, C++, C#, Java, Ruby, PHP</td>
+                    </tr>
+                    <tr>
+                        <td>Job titles</td>
+                        <td>Software engineer</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>Python, C++, C#, Java, Ruby, PHP</td>
+                    </tr>
+                    <tr>
+                        <td>Job titles</td>
+                        <td>Software engineer</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>Python, C++, C#, Java, Ruby, PHP</td>
+                    </tr>
+                    <tr>
+                        <td>Job titles</td>
+                        <td>Software engineer</td>
+                    </tr>
+                    <tr>
+                        <td>Languages</td>
+                        <td>Python, C++, C#, Java, Ruby, PHP</td>
+                    </tr>
+                    <tr>
+                        <td>Job titles</td>
+                        <td>Software engineer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section-bts">
+            <div class="account-bt">Edit job</div>
+            <div class="account-bt" style="color: rgb(157, 12, 12); margin-top: 450px;">Delete job</div>
+        </div>
+    </div>
+
+    <script>
+        function handleItemClick(element) {
+            element.classList.toggle("clicked");
+        }
+    </script>
+
+    <script>
+        var boxItems = document.querySelectorAll('.box-item');
+
+        boxItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                // Unclick all other box-items
+                boxItems.forEach(function (otherItem) {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('clicked');
+                    }
+                });
+
+                // Toggle the clicked state of the current item
+                this.classList.toggle('clicked');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
