@@ -38,6 +38,19 @@
             gap: 15px;
         }
 
+        .account-bt {
+            background-color: #6e8798;
+            color: rgb(0, 0, 0);
+            padding: 10px 15px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
         .signup-btn,
         .login-btn {
             background-color: #2ecc71;
@@ -97,6 +110,23 @@
             margin-bottom: 5px;
         }
 
+        .info-label {
+            font-weight: bold;
+            color: rgb(74, 74, 74);
+            margin-bottom: 5px;
+            font-size: 25px;
+        }
+
+        .info-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
         .signup-input {
             width: 100%;
             padding: 10px;
@@ -143,6 +173,33 @@
         .signup-submit:hover {
             background-color: #2980b9;
         }
+
+        table {
+            margin-top: 10px;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 
@@ -167,29 +224,37 @@
         <!-- Right side with description and signup form -->
         <div class="description-container">
             <p class="description">
-                Welcome to Your Website! Explore the amazing functionalities that our platform offers.
-                Join us today to experience a whole new world of possibilities.
+                Welcome to our innovative hiring platform, where seamless recruitment meets top talent. Our website is
+                designed to empower both employers and job seekers with cutting-edge features and a user-friendly
+                interface. Employers can effortlessly post job openings, review candidate profiles, and streamline their
+                hiring process. Job seekers benefit from personalized profiles, job matching algorithms, and a vast
+                database of opportunities. Explore a platform that fosters efficient connections between employers and
+                talented individuals, making the hiring journey a collaborative and successful experience for all.
             </p>
         </div>
         <!-- Signup Form -->
         <div class="signup-form">
-            <h2>Sign Up</h2>
+            <h2>Sign Up as Professional - 2</h2>
             <form>
-                <label for="cat1">Category 1:</label>
-                <input type="cat1" class="signup-input" placeholder="Category 1">
-                <div class="input-guide">Info message</div>
-                <div class="input-error">Error message</div>
-                <label for="cat1skills">Skills - Category 1:</label>
-                <input type="cat1skills" class="signup-input" placeholder="Skills">
-                <div class="input-guide">Separate each skill by a comma. Ex: Java,Amazon Web Services,Python</div>
-                <div class="input-error">Error message</div>
-
-                <label for="cat2">Category 2:</label>
-                <input type="cat2" class="signup-input" placeholder="Category 2">
-                <div class="input-guide">Info message</div>
-                <div class="input-error">Error message</div>
-                <label for="cat2skills">Skills - Category 2:</label>
-                <input type="cat2skills" class="signup-input" placeholder="Skills">
+                <div class="info-label">Your qualifications:</div>
+                <input id="categoryname" class="info-input" placeholder="Category name">
+                <input id="categoryskills" class="info-input" placeholder="Skills">
+                <div class="input-guide">Separate skills with commas</div>
+                <div class="account-bt" onclick="add()" style="width:fit-content;">Add</div>
+                <table id="categorytable">
+                    <thread>
+                        <tr>
+                            <th>Category</th>
+                            <th>Skills</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <!-- Body is kepty empty initially -->
+                    </tbody>
+                    <tfoot>
+                        <!-- No need for footer information -->
+                    </tfoot>
+                </table>
                 <div class="input-guide">Separate each skill by a comma. Ex: Java,Amazon Web Services,Python</div>
                 <div class="input-error">Error message</div>
 
@@ -198,6 +263,22 @@
         </div>
     </div>
 
+    <script>
+        var count = 1;
+        function add() {
+            var category = document.getElementById("categoryname").value;
+            var skills = document.getElementById("categoryskills").value;
+            var table = document.getElementById("categorytable");
+            var row = table.insertRow(count++);
+            var col1 = row.insertCell(0);
+            var col2 = row.insertCell(1);
+            col1.innerHTML = category;
+            col2.innerHTML = skills;
+            // Reset the category field and skills fields to be blank
+            document.getElementById("categoryname").value = "";
+            document.getElementById("categoryskills").value = "";
+        }
+    </script>
 </body>
 
 </html>
